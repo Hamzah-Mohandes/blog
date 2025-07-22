@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog App with Next.js
+
+This is a [Next.js](https://nextjs.org) blog application.
+
+## Recent Changes
+
+### 2025-07-22
+- Added Navbar component with responsive design
+- Created navigation links for Home and Blogs pages
+- Styled Navbar with indigo background and hover effects
+- Integrated Navbar into the main layout
 
 ## Getting Started
 
