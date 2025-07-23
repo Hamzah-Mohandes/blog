@@ -1,15 +1,27 @@
 import Article from '../components/Article'
 import Container from '../components/Container'
 import React from 'react'
-function Blogs() {
+
+// server side rendering
+
+export interface IGetArticle {
+    id?: number;
+    title?: string;
+    description?: string;
+}
+export default async function Blogs() {
+
+    const result = await fetch('http://localhost:3001/articles')
+    const data = await result.json() as IGetArticle[]
+    console.log(data) // data is an array of objects
     return (
         <Container>
             <div className='grid grid-cols-4 gap-4 mt-4'>
-                <Article />
+                {data.map((item) => (
+                    <Article key={item.id} {...item} />
+                ))}
             </div>
 
         </Container>
     )
 }
-
-export default Blogs
