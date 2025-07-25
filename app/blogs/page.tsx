@@ -1,5 +1,6 @@
 import Article from '../components/Article'
 import Container from '../components/Container'
+import Link from 'next/link';
 import React from 'react'
 
 // server side rendering
@@ -18,7 +19,10 @@ export default async function Blogs() {
         <Container>
             <div className='grid grid-cols-4 gap-4 mt-4'>
                 {data.map((item) => (
-                    <Article key={item.id} {...item} />
+                    <Link href={`/blogs/${item.id}`} key={item.id}>
+                        <Article key={item.id} {...item} />
+                    </Link>
+
                 ))}
             </div>
 
