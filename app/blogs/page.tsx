@@ -6,7 +6,7 @@ import React from 'react'
 // server side rendering
 
 export interface IGetArticle {
-    id?: number;
+    id?: string;
     title?: string;
     description?: string;
 }
